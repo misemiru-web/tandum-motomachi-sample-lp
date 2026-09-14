@@ -182,7 +182,7 @@
 
 @media (max-width: 767px) {
   .header {
-    height: 64px;
+    height: 72px;
   }
 
   .inner {
@@ -191,11 +191,14 @@
   }
 
   .logo span {
-    font-size: 25px;
+    font-size: 27px;
   }
 
   .logo small {
-    display: none;
+    display: block;
+    margin-top: 4px;
+    font-size: 7px;
+    letter-spacing: .04em;
   }
 
   .booking {

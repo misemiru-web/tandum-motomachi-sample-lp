@@ -84,7 +84,10 @@ export default function Home() {
           <div className={`${styles.container} ${styles.heroInner}`}>
             <Reveal className={styles.heroCopy}>
               <Eyebrow>MOTOMACHI / YOKOHAMA</Eyebrow>
-              <h1 id="hero-title">白髪を隠す毎日から、<br />白髪を活かす楽しみへ。</h1>
+              <h1 id="hero-title" className={styles.heroTitle}>
+                <span>白髪を隠す毎日から、</span>
+                <span>白髪を活かす楽しみへ。</span>
+              </h1>
               <p className={styles.heroLead}>
                 年齢とともに変わる髪に、やさしく向き合う。<br />
                 T&umは、大人女性の白髪ケアと美しさに寄り添う、<br className={styles.desktopOnly} />
@@ -110,7 +113,19 @@ export default function Home() {
                 priority
                 sizes="(max-width: 767px) 100vw, 58vw"
               />
-              <span className={styles.imageLabel}>HAIR DESIGN IMAGE</span>
+              <svg
+                className={styles.heroCurve}
+                viewBox="0 0 160 1000"
+                preserveAspectRatio="none"
+                aria-hidden="true"
+              >
+                <path d="M0,0 C108,0 148,120 120,260 C86,425 22,520 55,690 C86,838 148,930 160,1000 L0,1000 Z" />
+              </svg>
+              <div className={styles.heroImageCopy} aria-hidden="true">
+                <p>いくつになっても、<br />わたしらしく。</p>
+                <span />
+                <small>T&UM<br />HAIR SALON<br />IN YOKOHAMA</small>
+              </div>
             </Reveal>
           </div>
         </section>
@@ -135,7 +150,6 @@ export default function Home() {
                   height={1402}
                   sizes="(max-width: 767px) 100vw, 50vw"
                 />
-                <span className={styles.imageLabel}>HAIR CONCERN IMAGE</span>
               </Reveal>
             </div>
 
@@ -185,7 +199,10 @@ export default function Home() {
           <div className={styles.container}>
             <Reveal className={styles.centerHeading}>
               <Eyebrow>FEATURES</Eyebrow>
-              <h2 id="features-title">T&umが選ばれる3つの特徴</h2>
+              <h2 id="features-title">
+                <span className={styles.mobileHeadingLine}>T&umが選ばれる</span>
+                <span className={styles.mobileHeadingLine}>3つの特徴</span>
+              </h2>
             </Reveal>
             <div className={styles.featureGrid}>
               {[
@@ -337,7 +354,10 @@ export default function Home() {
           <div className={styles.priceInner}>
             <Reveal className={styles.priceHeading}>
               <Eyebrow>PRICE</Eyebrow>
-              <h2 id="price-title">わかりやすい料金で、<br />安心してご相談ください。</h2>
+              <h2 id="price-title">
+                <span className={styles.headingLine}>わかりやすい料金で、</span>
+                <span className={styles.headingLine}>安心してご相談ください。</span>
+              </h2>
               <p>主なメニューの料金をご案内します。</p>
             </Reveal>
             <Reveal className={styles.priceList} delay={80}>
@@ -454,7 +474,12 @@ export default function Home() {
           <div className={`${styles.container} ${styles.reservationInner}`}>
             <Reveal>
               <Eyebrow>RESERVATION</Eyebrow>
-              <h2 id="reservation-title">自分に合う白髪との付き合い方を、<br />相談してみませんか。</h2>
+              <h2 id="reservation-title">
+                <span className={styles.mobileHeadingLine}>自分に合う白髪との</span>
+                <span className={styles.mobileHeadingLine}>付き合い方を、</span>
+                <br className={styles.desktopHeadingBreak} />
+                <span className={styles.mobileHeadingLine}>相談してみませんか。</span>
+              </h2>
               <p>
                 まずはお気軽にご予約ください。<br />
                 あなたの髪とこれからを、一緒に考えていきます。
@@ -488,12 +513,6 @@ export default function Home() {
           <p>正式な店舗サイトではありません。</p>
         </div>
       </footer>
-
-      <a className={styles.mobileSticky} data-mobile-sticky href={bookingUrl} target="_blank" rel="noreferrer">
-        <CalendarBlank aria-hidden="true" weight="light" />
-        Web予約する
-        <ArrowRight aria-hidden="true" />
-      </a>
     </div>
   );
 }

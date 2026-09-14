@@ -52,4 +52,35 @@
 - FAQ keeps a single expanded item after interaction.
 - No captured browser runtime errors.
 
+previous full-page result: passed
+
+## Header / Hero focused pass — 2026-09-14
+
+- Source visuals: `references/sections/01_hero_desktop_reference.jpg` (1672 × 941), `references/sections/01_hero_mobile_reference.jpg` (941 × 1672), plus the desktop and mobile full-page references.
+- Implementation captures: `/tmp/tandum-hero-375.png`, `/tmp/tandum-hero-390.png`, `/tmp/tandum-hero-1440.png` at device scale factor 1.
+- Viewports: 375 × 1000, 390 × 1000, and 1440 × 1000 CSS px; static export, initial page state, reduced motion enabled.
+- Full-view comparison: Header and complete above-the-fold Hero composition were compared at all three widths.
+- Focused comparison: image crop, organic transition, image-overlay copy, headline wrapping, station line, Quiet Confidence block, and sticky CTA clearance were inspected independently.
+- P2 finding: the earlier desktop image retained a card-like inset and the mobile order was copy-first. Fixed by extending the desktop image to the Hero edges, removing its radius, and switching mobile to image-first flow.
+- P2 finding: the earlier Hero lacked the reference's supporting brand copy and curved transition. Added short overlay copy, small brand information, desktop arc lines, and a mobile off-white curved boundary.
+- Post-fix evidence: all three captures have no horizontal overflow, the supplied Hero image remains undistorted, the removed `HAIR DESIGN IMAGE` label count is zero, and no browser runtime errors were captured.
+- Residual P3: the mobile implementation is vertically more spacious than the source artwork because it retains the project requirement for readable body text and touch-target sizing.
+
+## Problem focused pass — 2026-09-14
+
+- Source visuals: `references/sections/08_problem_desktop_reference.jpg` and `references/sections/09_problem_mobile_reference.jpg`.
+- Implementation captures: `/tmp/tandum-problem-375.png`, `/tmp/tandum-problem-390.png`, and `/tmp/tandum-problem-1440.png` at device scale factor 1.
+- Combined comparison evidence: `/tmp/tandum-problem-desktop-comparison.png` and `/tmp/tandum-problem-mobile-comparison.png`, normalized to equal widths.
+- P2 finding: the earlier image was portrait-like and card-shaped. Fixed with a wider editorial crop, minimal radius, and a larger right-hand desktop column.
+- P2 finding: the earlier list lacked the reference's number rules and had heavier spacing. Added short accent rules, lighter dividers, and tighter mobile item spacing.
+- Post-fix evidence: the requested content order is preserved, the supplied image remains undistorted, the image label is absent, no horizontal overflow occurs at 375 / 390 / 1440px, and no browser runtime errors were captured.
+- Residual P3: text remains slightly larger and the mobile section therefore longer than the source artwork in order to preserve the project's readability requirements.
+
+## Hero → Problem mobile flow pass — 2026-09-14
+
+- Implementation captures: `/tmp/tandum-mobile-flow-375.png` and `/tmp/tandum-mobile-flow-390.png`, device scale factor 1, reduced motion enabled.
+- P2 finding: the Hero overlay copy approached the subject's face at narrow widths. Shifted the image crop toward the right-side subject position and tightened the overlay typography to preserve a clean left-side text area.
+- P2 finding: the image curve and combined Hero/Problem spacing created excessive vertical air. Lowered and flattened the curve, reduced Hero bottom spacing, and added a subtle Problem divider with tighter top spacing.
+- Post-fix evidence: overlay copy remains intact without unwanted wrapping, CTA/station/Quiet Confidence remain readable, the transition is continuous, and both widths have `clientWidth === scrollWidth` with no runtime errors.
+
 final result: passed
