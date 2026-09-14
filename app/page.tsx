@@ -16,6 +16,9 @@ import styles from "./page.module.css";
 const bookingUrl =
   "https://repitte.jp/reserve/store?token=43bf23a9c616575f8e656cccd8fc4461";
 
+const assetPath = (path: string) =>
+  `${process.env.NEXT_PUBLIC_BASE_PATH ?? ""}${path}`;
+
 const services = [
   {
     number: "01",
@@ -106,7 +109,7 @@ export default function Home() {
 
             <Reveal className={styles.heroVisual} delay={80}>
               <Image
-                src="/images/ai/hero/hero_gray_hair_portrait.jpg"
+                src={assetPath("/images/ai/hero/hero_gray_hair_portrait.jpg")}
                 alt="グレーヘアを活かした大人のヘアデザインイメージ"
                 width={1448}
                 height={1086}
@@ -144,7 +147,7 @@ export default function Home() {
               </Reveal>
               <Reveal className={styles.problemImage} delay={80}>
                 <Image
-                  src="/images/ai/problem/03_trouble_damaged_hair_closeup.jpg"
+                  src={assetPath("/images/ai/problem/03_trouble_damaged_hair_closeup.jpg")}
                   alt="髪の根元や質感について考えるイメージ"
                   width={1122}
                   height={1402}
@@ -174,7 +177,7 @@ export default function Home() {
           <div className={`${styles.container} ${styles.conceptInner}`}>
             <Reveal className={styles.conceptImage}>
               <Image
-                src="/images/ai/concept/06_concept_botanical_still_life.jpg"
+                src={assetPath("/images/ai/concept/06_concept_botanical_still_life.jpg")}
                 alt="自然光に包まれた植物の静物イメージ"
                 width={1448}
                 height={1086}
@@ -232,7 +235,7 @@ export default function Home() {
               <div className={styles.serviceVisuals}>
                 <Image
                   className={styles.consultationImage}
-                  src="/images/ai/services/06_salon_consultation_scene.jpg"
+                  src={assetPath("/images/ai/services/06_salon_consultation_scene.jpg")}
                   alt="髪について相談するカウンセリングのイメージ"
                   width={1448}
                   height={1086}
@@ -240,7 +243,7 @@ export default function Home() {
                 />
                 <Image
                   className={styles.swatchImage}
-                  src="/images/ai/services/07_hair_color_bowls_and_swatches.jpg"
+                  src={assetPath("/images/ai/services/07_hair_color_bowls_and_swatches.jpg")}
                   alt="カラーの選択肢を表すカラースウォッチのイメージ"
                   width={1448}
                   height={1086}
@@ -248,7 +251,7 @@ export default function Home() {
                 />
                 <Image
                   className={styles.serviceHairImage}
-                  src="/images/ai/services/08_service_translucent_brown_bob.jpg"
+                  src={assetPath("/images/ai/services/08_service_translucent_brown_bob.jpg")}
                   alt="透明感のあるブラウンボブのヘアデザインイメージ"
                   width={1122}
                   height={1402}
@@ -290,7 +293,7 @@ export default function Home() {
 
             <Reveal className={styles.styleLeadImage} delay={60}>
               <Image
-                src="/images/ai/style/10_style_layered_brown_bob.jpg"
+                src={assetPath("/images/ai/style/10_style_layered_brown_bob.jpg")}
                 alt="レイヤーを生かしたブラウンボブのヘアデザインイメージ"
                 width={1122}
                 height={1402}
@@ -301,7 +304,7 @@ export default function Home() {
             <div className={styles.styleSideImages}>
               <Reveal className={styles.styleWide} delay={100}>
                 <Image
-                  src="/images/ai/style/11_style_chestnut_bob_cream_sweater.jpg"
+                  src={assetPath("/images/ai/style/11_style_chestnut_bob_cream_sweater.jpg")}
                   alt="チェスナットカラーのボブスタイルイメージ"
                   width={1122}
                   height={1402}
@@ -310,7 +313,7 @@ export default function Home() {
               </Reveal>
               <Reveal delay={140}>
                 <Image
-                  src="/images/ai/style/12_style_bob_back_view.jpg"
+                  src={assetPath("/images/ai/style/12_style_bob_back_view.jpg")}
                   alt="ボブスタイルを後ろから見たヘアデザインイメージ"
                   width={1122}
                   height={1402}
@@ -319,7 +322,7 @@ export default function Home() {
               </Reveal>
               <Reveal delay={180}>
                 <Image
-                  src="/images/ai/style/13_style_ash_gray_bob_profile.jpg"
+                  src={assetPath("/images/ai/style/13_style_ash_gray_bob_profile.jpg")}
                   alt="アッシュグレーのショートボブのヘアデザインイメージ"
                   width={1122}
                   height={1402}
@@ -398,7 +401,7 @@ export default function Home() {
             </Reveal>
             <Reveal className={styles.visitImage} delay={80}>
               <Image
-                src="/images/ai/salon/15_first_visit_salon_interior.jpg"
+                src={assetPath("/images/ai/salon/15_first_visit_salon_interior.jpg")}
                 alt="落ち着いて相談できるサロン空間のイメージ"
                 width={1448}
                 height={1086}
@@ -415,7 +418,7 @@ export default function Home() {
               <Eyebrow>FAQ</Eyebrow>
               <h2 id="faq-title">よくあるご質問</h2>
               <Image
-                src="/images/ai/faq/16_faq_plant_and_books_still_life.jpg"
+                src={assetPath("/images/ai/faq/16_faq_plant_and_books_still_life.jpg")}
                 alt="植物と本の落ち着いた静物イメージ"
                 width={1448}
                 height={1086}
@@ -451,7 +454,7 @@ export default function Home() {
             </Reveal>
             <Reveal className={styles.accessImage} delay={80}>
               <Image
-                src="/images/ai/access/17_access_motomachi_street_sign.jpg"
+                src={assetPath("/images/ai/access/17_access_motomachi_street_sign.jpg")}
                 alt="元町を想起させる街並みのイメージ"
                 width={1448}
                 height={1086}
@@ -465,7 +468,7 @@ export default function Home() {
         <section className={styles.reservation} aria-labelledby="reservation-title">
           <Image
             className={styles.reservationBackground}
-            src="/images/ai/reservation/18_cta_leaf_shadow_background.jpg"
+            src={assetPath("/images/ai/reservation/18_cta_leaf_shadow_background.jpg")}
             alt=""
             fill
             sizes="100vw"
